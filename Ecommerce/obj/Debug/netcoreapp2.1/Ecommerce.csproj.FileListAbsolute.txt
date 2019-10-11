@@ -46,3 +46,4 @@ C:\Users\1714987\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Ecom
 C:\Users\1714987\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Ecommerce.dll
 C:\Users\1714987\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Ecommerce.pdb
 C:\Users\1714987\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Ecommerce.csproj.CopyComplete
+C:\Users\1714987\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Cadastrar.g.cshtml.cs
