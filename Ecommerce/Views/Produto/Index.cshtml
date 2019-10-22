@@ -1,0 +1,58 @@
+﻿
+@{
+    List<Produto> listaProdutos = ViewBag.Produtos;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        td, th{
+            border: solid #000 1px;
+            padding : 10px;
+        }
+        th{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Index</h1>
+    <p><a asp-action="Cadastrar">Cadastrar Produto</a></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Criado em</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in listaProdutos)
+            {
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.Descricao</td>
+                    <td>@item.Preco.ToString("C2")</td>
+                    <td>@item.Quantidade</td>
+                    <td>@item.CriadoEm</td>
+                    <td>
+                        <a>Remover</a>
+                    </td>
+                    <td>
+                        <a>Alterar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        </table>
+</body>
+</html>

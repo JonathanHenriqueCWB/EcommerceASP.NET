@@ -19,6 +19,7 @@ namespace Ecommerce.Controllers
         //Métodos dos controlers são chamados de actions
         public IActionResult Index()
         {
+            ViewBag.Produtos = _produtoDAO.ListarProdutos();
             return View();
         }
 
