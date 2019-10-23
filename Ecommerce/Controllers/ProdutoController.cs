@@ -10,19 +10,23 @@ namespace Ecommerce.Controllers
 {
     public class ProdutoController : Controller
     {
+        #region COMFIGURAÇÃO CONTEXTO
         private readonly ProdutoDAO _produtoDAO;
         public ProdutoController(ProdutoDAO produtoDAO)
         {
             _produtoDAO = produtoDAO;
         }
-
+        #endregion
+        #region INDEX E LISTAR
         //Métodos dos controlers são chamados de actions
         public IActionResult Index()
         {
             ViewBag.Produtos = _produtoDAO.ListarProdutos();
             return View();
         }
-
+        #endregion
+        #region CADASTRAR
+        //AÇÃO DE CADATROS GET E POST
         public IActionResult Cadastrar()
         {
             return View();
@@ -38,7 +42,24 @@ namespace Ecommerce.Controllers
 
             _produtoDAO.CadastrarProduto(produto);
 
-            return View();
+            return RedirectToAction("Index");
         }
+        #endregion
+        #region REMOVER
+        //AÇÃO DE REMOVER
+        public IActionResult Remover(int? id)
+        {
+            if (id != null)
+            {
+                _produtoDAO.Remover(id);
+            }
+            else
+            {
+                //Redirecionar para uma página de erro
+            }
+            return RedirectToAction("Index");
+        }
+        #endregion
+
     }
 }
