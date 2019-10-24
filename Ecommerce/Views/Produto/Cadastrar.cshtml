@@ -1,36 +1,26 @@
-﻿<!DOCTYPE html>
+﻿<h3>Cadastrar</h3>
 
-<html>
-    <head lang="pt-br">
-        <meta name="viewport" content="width=device-width" />
-        <meta charset="utf-8" />
-        <title>Cadastrar</title>
-    </head>
-    <body>
-        <header></header>
+<form asp-action="Cadastrar" method="post" class="col-md-5">
 
-        <article>
-            <form asp-action="Cadastrar" method="post">
-                <label>Nome</label>
-                <input type="text" name="txtNome" /><br />
 
-                <label>Descrição</label>
-                <input type="text" name="txtDescricao"/><br />
+    <div class="form-group">
+        <label class="col-form-label" for="nome">Nome</label>
+        <input type="text" class="form-control" placeholder="Nome" id="nome" name="txtNome">
+    </div>
 
-                <label>Preço</label>
-                <input type="text" name="txtPreco" /><br />
-
-                <label>Quantidade</label>
-                <input type="text" name="txtQuantidade"/><br />
-
-                <input type="submit" />
-            </form>
-        </article>
-
-        <aside></aside>
-
-        <footer>
-            <small>&copy; - Todos direitos reservados</small>
-        </footer>
-    </body>
-</html>
+    <div class="form-group">
+        <label class="col-form-label" for="descricao">Descrição</label>
+        <input type="text" class="form-control" placeholder="Descrição" id="descricao" name="txtDescricao">
+    </div>
+    
+    <div class="form-group">
+        <label class="col-form-label" for="preco">Descrição</label>
+        <input type="text" class="form-control" placeholder="Preço" id="preco" name="txtPreco">
+    </div> 
+    
+    <div class="form-group">
+        <label class="col-form-label" for="quantidade">Quantidade</label>
+        <input type="text" class="form-control" placeholder="Quantidade" id="quantidade" name="txtQuantidade">
+    </div>
+    <input type="submit" class="form-control btn btn-success" />
+</form>

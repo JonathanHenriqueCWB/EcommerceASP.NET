@@ -59,7 +59,7 @@ using Ecommerce.Models;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n    ");
             EndContext();
             BeginContext(31, 163, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d0044c3f67d4de886c3ea188a678ba3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4184f570c0ab417b825b63b23aeaacc5", async() => {
                 BeginContext(50, 137, true);
                 WriteLiteral("\r\n        <meta name=\"viewport\" content=\"width=device-width\" />\r\n        <meta charset=\"utf-8\" />\r\n        <title>Cadastrar</title>\r\n    ");
                 EndContext();
@@ -80,12 +80,12 @@ using Ecommerce.Models;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(200, 753, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f418e9f8a79b4ea391408346c3c127eb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0bea24d80f34800bf9ddafafdf3592e", async() => {
                 BeginContext(206, 62, true);
                 WriteLiteral("\r\n        <header></header>\r\n\r\n        <article>\r\n            ");
                 EndContext();
                 BeginContext(268, 523, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "903f0a1b132648c1be94a3c354d80b62", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a7236510329470eaac3d963881eda78", async() => {
                     BeginContext(311, 473, true);
                     WriteLiteral(@"
                 <label>Nome</label>

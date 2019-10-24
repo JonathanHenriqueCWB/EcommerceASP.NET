@@ -1,34 +1,47 @@
 ﻿@model Produto
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Alterar</title>
-</head>
-<body>
-    <form asp-action="Alterar" method="post">
-        <fieldset>
-            <legend>Alterar Produto</legend>
-            <input type="hidden" asp-for="Id" />
+<form asp-action="Alterar" method="post">
+    <fieldset>
+        <legend>Alterar Produto</legend>
 
-            <label>ID</label>
-            <input type="text" asp-for="Id" readonly />
+        <!--Escondido-->
+        <input type="hidden" asp-for="Id" />
 
-            <label>Nome:</label>
-            <input type="text" asp-for="Nome" />
+        <!--Somente leitura-->
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label">ID</label>
+            <div class="form-group col-sm-2">
+                <input class="form-control" type="text" readonly="" asp-for="Id">
+            </div>
+        </div>
 
-            <label>Descrição:</label>
-            <input type="text" asp-for="Descricao" />
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label">Nome:</label>
+            <div class="form-group col-sm-4">
+                <input class="form-control" type="text" asp-for="Nome">
+            </div>
+        </div>
 
-            <label>Preço:</label>
-            <input type="text" asp-for="Preco" />
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label">Descrição:</label>
+            <div class="form-group col-sm-4">
+                <input class="form-control" type="text" asp-for="Descricao">
+            </div>
+        </div>
 
-            <label>Quantidade:</label>
-            <input type="text" asp-for="Quantidade" />
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label">Preço:</label>
+            <div class="form-group col-sm-4">
+                <input class="form-control" type="text" asp-for="Preco">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label">Quantidade:</label>
+            <div class="form-group col-sm-4">
+                <input class="form-control" type="text" asp-for="Quantidade">
+            </div>
+        </div>
 
-            <input type="submit" value="Salvar" />
-        </fieldset>
-    </form>
-</body>
-</html>
+        <input type="submit" class="btn btn-success" value="Salvar" />
+    </fieldset>
+</form>

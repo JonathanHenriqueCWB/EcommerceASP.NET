@@ -1,58 +1,33 @@
-﻿
-@{
+﻿@{
     List<Produto> listaProdutos = ViewBag.Produtos;
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <style>
-        td, th{
-            border: solid #000 1px;
-            padding : 10px;
-        }
-        th{
-            background-color: #ccc;
-        }
-    </style>
-</head>
-<body>
-    <h1>Index</h1>
+    <h1>Produtos</h1>
     <p><a asp-action="Cadastrar">Cadastrar Produto</a></p>
-
-    <table>
+    <table class="table table-hover">
         <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Criado em</th>
-                <th></th>
+            <tr class="table-primary">
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Criado em</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in listaProdutos)
             {
-                <tr>
+                <tr class="table-secondary">
                     <td>@item.Nome</td>
                     <td>@item.Descricao</td>
                     <td>@item.Preco.ToString("C2")</td>
                     <td>@item.Quantidade</td>
                     <td>@item.CriadoEm</td>
-                    <td>
+                    <td style="text-align: right">
                         <a asp-action="Remover" asp-route-id="@item.Id">Remover</a>
-                    </td>
-                    <td>
                         <a asp-action="Alterar" asp-route-id="@item.Id">Alterar</a>
                     </td>
                 </tr>
             }
         </tbody>
-        </table>
-</body>
-</html>
+    </table>
