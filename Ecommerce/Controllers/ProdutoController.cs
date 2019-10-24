@@ -60,6 +60,18 @@ namespace Ecommerce.Controllers
             return RedirectToAction("Index");
         }
         #endregion
+        #region ALTERAR
+        public IActionResult Alterar(int? id)
+        {
+            return View(_produtoDAO.BuscarProdutoId(id));
+        }
+        [HttpPost]
+        public IActionResult Alterar(Produto produto)
+        {
+            _produtoDAO.Alterar(produto);
+            return RedirectToAction("Index");
+        }
+        #endregion
 
     }
 }

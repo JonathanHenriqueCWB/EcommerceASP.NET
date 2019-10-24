@@ -1,0 +1,34 @@
+﻿@model Produto
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alterar</title>
+</head>
+<body>
+    <form asp-action="Alterar" method="post">
+        <fieldset>
+            <legend>Alterar Produto</legend>
+            <input type="hidden" asp-for="Id" />
+
+            <label>ID</label>
+            <input type="text" asp-for="Id" readonly />
+
+            <label>Nome:</label>
+            <input type="text" asp-for="Nome" />
+
+            <label>Descrição:</label>
+            <input type="text" asp-for="Descricao" />
+
+            <label>Preço:</label>
+            <input type="text" asp-for="Preco" />
+
+            <label>Quantidade:</label>
+            <input type="text" asp-for="Quantidade" />
+
+            <input type="submit" value="Salvar" />
+        </fieldset>
+    </form>
+</body>
+</html>

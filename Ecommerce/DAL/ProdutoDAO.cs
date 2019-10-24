@@ -35,6 +35,13 @@ namespace Ecommerce.DAL
             _context.SaveChanges();
         }
         #endregion
+        #region ALTERAR
+        public void Alterar(Produto produto)
+        {
+            _context.Produtos.Update(produto);
+            _context.SaveChanges();
+        }
+        #endregion
         #region BUSCAR PRODUTO POR ID
         public Produto BuscarProdutoId(int? id)
         {
