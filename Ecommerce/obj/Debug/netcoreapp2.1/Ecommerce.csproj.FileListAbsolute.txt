@@ -76,4 +76,4 @@ C:\Users\Jony\source\repos\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Ec
 C:\Users\Jony\source\repos\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Index.cshtml.g.cs
 C:\Users\Jony\source\repos\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Alterar.cshtml.g.cs
 C:\Users\Jony\source\repos\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\Jony\source\repos\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\ViewStart.cshtml.g.cs
+C:\Users\Jony\source\repos\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs

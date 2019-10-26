@@ -21,8 +21,7 @@ namespace Ecommerce.Controllers
         //Métodos dos controlers são chamados de actions
         public IActionResult Index()
         {
-            ViewBag.Produtos = _produtoDAO.ListarProdutos();
-            return View();
+            return View(_produtoDAO.ListarProdutos());
         }
         #endregion
         #region CADASTRAR
@@ -32,17 +31,13 @@ namespace Ecommerce.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Cadastrar(string txtNome, string txtDescricao, string txtQuantidade, string txtPreco)
+        public IActionResult Cadastrar(Produto produto)
         {
-            Produto produto = new Produto();
-            produto.Nome = txtNome;
-            produto.Descricao = txtDescricao;
-            produto.Quantidade = Convert.ToInt32(txtQuantidade);
-            produto.Preco = Convert.ToDouble(txtPreco);
-
-            _produtoDAO.CadastrarProduto(produto);
-
-            return RedirectToAction("Index");
+            if (_produtoDAO.CadastrarProduto(produto))
+            {
+                return RedirectToAction("Index");
+            }
+            return View();            
         }
         #endregion
         #region REMOVER

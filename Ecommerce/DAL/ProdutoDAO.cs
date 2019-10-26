@@ -16,10 +16,11 @@ namespace Ecommerce.DAL
         }
         #endregion
         #region CADASTRAR
-        public void CadastrarProduto(Produto p)
+        public bool CadastrarProduto(Produto p)
         {
             _context.Produtos.Add(p);
             _context.SaveChanges();
+            return true;
         }
         #endregion
         #region LISTAR
