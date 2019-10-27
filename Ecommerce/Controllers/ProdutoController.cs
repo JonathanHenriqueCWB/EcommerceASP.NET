@@ -33,10 +33,13 @@ namespace Ecommerce.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Produto produto)
         {
-            if (_produtoDAO.CadastrarProduto(produto))
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index");
-            }
+                if (_produtoDAO.CadastrarProduto(produto))
+                {
+                    return RedirectToAction("Index");
+                }
+            }            
             return View();            
         }
         #endregion
@@ -63,8 +66,12 @@ namespace Ecommerce.Controllers
         [HttpPost]
         public IActionResult Alterar(Produto produto)
         {
-            _produtoDAO.Alterar(produto);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _produtoDAO.Alterar(produto);
+                return RedirectToAction("Index");
+            }
+            return View();            
         }
         #endregion
 
