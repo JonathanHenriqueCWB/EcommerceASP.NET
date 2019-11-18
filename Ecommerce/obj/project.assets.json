@@ -4615,6 +4615,30 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.11"
+        },
+        "compile": {
+          "bin/placeholder/Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repository.dll": {}
+        }
       }
     }
   },
@@ -12526,15 +12550,27 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Repository/1.0.0": {
+      "type": "project",
+      "path": "../Repositor/Repository.csproj",
+      "msbuildProject": "../Repositor/Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Domain >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.11",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.10"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.10",
+      "Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12543,11 +12579,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Ecommerce\\Ecommerce.csproj",
+      "projectUniqueName": "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Ecommerce\\Ecommerce.csproj",
       "projectName": "Ecommerce",
-      "projectPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Ecommerce\\Ecommerce.csproj",
+      "projectPath": "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Ecommerce\\Ecommerce.csproj",
       "packagesPath": "C:\\Users\\Jony\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Ecommerce\\obj\\",
+      "outputPath": "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Ecommerce\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jony\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -12562,7 +12598,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj"
+            },
+            "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Repositor\\Repository.csproj": {
+              "projectPath": "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Repositor\\Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

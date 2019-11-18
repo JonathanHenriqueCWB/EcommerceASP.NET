@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain.Models;
 using Ecommerce.DAL;
-using Ecommerce.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce.Controllers
