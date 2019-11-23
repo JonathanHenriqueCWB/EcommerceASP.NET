@@ -43,6 +43,9 @@ namespace Domain.Models
         #region Criado em
         public DateTime CriadoEm { get; set; }
         #endregion
+        #region IMAGEM
+        public string Imagem { get; set; }
+        #endregion
 
         public Produto()
         {
