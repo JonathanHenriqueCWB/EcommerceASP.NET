@@ -143,3 +143,5 @@ C:\Users\jonat\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Ecomme
 C:\Users\jonat\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Ecommerce.csproj.CopyComplete
 C:\Users\jonat\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Ecommerce.dll
 C:\Users\jonat\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Ecommerce.pdb
+C:\Users\jonat\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Index.g.cshtml.cs
+C:\Users\jonat\Desktop\EcommerceASP.NET\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Create.g.cshtml.cs

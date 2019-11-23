@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Domain.Models;
 using Ecommerce.DAL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Repository.DAL;
 
 namespace Ecommerce.Controllers
 {
@@ -12,9 +14,11 @@ namespace Ecommerce.Controllers
     {
         #region COMFIGURAÇÃO CONTEXTO
         private readonly ProdutoDAO _produtoDAO;
-        public ProdutoController(ProdutoDAO produtoDAO)
+        private readonly CategoriaDAO _categoriaDAO;
+        public ProdutoController(ProdutoDAO produtoDAO, CategoriaDAO categoriaDAO)
         {
             _produtoDAO = produtoDAO;
+            _categoriaDAO = categoriaDAO;
         }
         #endregion
         #region INDEX E LISTAR
@@ -28,13 +32,17 @@ namespace Ecommerce.Controllers
         //AÇÃO DE CADATROS GET E POST
         public IActionResult Cadastrar()
         {
+            ViewBag.Categorias = new SelectList(_categoriaDAO.Listar(), "CategoriaId", "Nome");
             return View();
         }
         [HttpPost]
-        public IActionResult Cadastrar(Produto produto)
+        public IActionResult Cadastrar(Produto produto, int drpCategorias)
         {
+            ViewBag.Categorias = new SelectList(_categoriaDAO.Listar(), "CategoriaId", "Nome");
+
             if (ModelState.IsValid)
             {
+                produto.Categoria = _categoriaDAO.BuscarPorId(drpCategorias);
                 if (_produtoDAO.CadastrarProduto(produto))
                 {
                     return RedirectToAction("Index");

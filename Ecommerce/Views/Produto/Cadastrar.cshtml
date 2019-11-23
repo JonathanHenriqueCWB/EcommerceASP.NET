@@ -30,5 +30,14 @@
         <input type="text" asp-for="Quantidade" class="form-control" />
         <span asp-validation-for="Quantidade" class="text-danger"></span>
     </div>
+
+    <div id="Categoria" class="form-group">
+        <label>Categoria:</label>
+        <select asp-items="@ViewBag.Categorias"
+                class="form-control" name="drpCategorias">
+            <option> -- SELECIONE -- </option>
+        </select>
+    </div>
+
     <input type="submit" class="form-control btn btn-success" />
 </form>

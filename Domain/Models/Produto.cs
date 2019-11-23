@@ -37,6 +37,9 @@ namespace Domain.Models
         [Range(1,100, ErrorMessage ="Mínimo 1 máximo 100 produtos")]
         public int Quantidade { get; set; }
         #endregion
+        #region Categoria
+        public Categoria Categoria { get; set; }
+        #endregion
         #region Criado em
         public DateTime CriadoEm { get; set; }
         #endregion

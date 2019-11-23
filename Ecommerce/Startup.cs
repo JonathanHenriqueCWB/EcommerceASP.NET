@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Repository.DAL;
 
 namespace Ecommerce
 {
@@ -37,6 +38,7 @@ namespace Ecommerce
             services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("EcommerceConection")) );
             //CONFIGURANDO A INJEÇÃO DE DEPENDÊNCIA
             services.AddScoped<ProdutoDAO>();
+            services.AddScoped<CategoriaDAO>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
