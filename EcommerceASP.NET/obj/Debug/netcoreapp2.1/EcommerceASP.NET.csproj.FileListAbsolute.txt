@@ -43,3 +43,4 @@ C:\Users\Jony\source\repos\EcommerceASP.NET\EcommerceASP.NET\obj\Debug\netcoreap
 C:\Users\Jony\source\repos\EcommerceASP.NET\EcommerceASP.NET\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Create.cshtml.g.cs
 C:\Users\Jony\source\repos\EcommerceASP.NET\EcommerceASP.NET\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Index.cshtml.g.cs
 C:\Users\Jony\source\repos\EcommerceASP.NET\EcommerceASP.NET\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Create.cshtml.g.cs
+C:\Users\Jony\source\repos\EcommerceASP.NET\EcommerceASP.NET\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Delete.cshtml.g.cs

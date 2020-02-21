@@ -4418,11 +4418,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Repository\\Repository.csproj",
+      "projectPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\Jony\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Repository\\obj\\",
+      "outputPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jony\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4438,8 +4438,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Jony\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj"
+            "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\Domain.csproj"
             }
           }
         }

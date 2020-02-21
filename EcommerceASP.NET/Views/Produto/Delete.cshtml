@@ -1,0 +1,31 @@
+﻿@model Produto
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>@ViewData["Title"]</h3>
+<h4>Tem certeza de que deseja excluir isso?</h4>
+<div>
+    <h4>Produto:</h4>
+    <hr />
+    <dl>
+        <dt>@Html.DisplayNameFor(model => model.Nome)</dt>
+        <dd>@Html.DisplayFor(model => model.Nome)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Quantidade)</dt>
+        <dd>@Html.DisplayFor(model => model.Quantidade)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Preco)</dt>
+        <dd>@Html.DisplayFor(model => model.Preco)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Imagem)</dt>
+        <dd><img src="~/images/@Model.Imagem" style="width:550px;height:320px" /></dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="ProdutoId" />
+        <input type="submit" class="btn btn-danger" value="Delete" />
+        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    </form>
+</div>
+

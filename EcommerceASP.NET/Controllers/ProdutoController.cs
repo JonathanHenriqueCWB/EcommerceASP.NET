@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.Models;
+using EcommerceASP.NET.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,8 +15,10 @@ using Repository.DAL;
 
 namespace EcommerceASP.NET.Controllers
 {
+    [Authorize]
     public class ProdutoController : Controller
     {
+        #region Construtor
         private readonly ProdutoDAO _produtoDAO;
         private readonly CategoriaDAO _categoriaDAO;
         private readonly IHostingEnvironment _hosting; //Imagem
@@ -23,13 +28,15 @@ namespace EcommerceASP.NET.Controllers
             _categoriaDAO = categoriaDAO;
             _hosting = hosting;
         }
-
+        #endregion
+        #region Index
         public async Task<IActionResult> Index()
         {
             var list = await _produtoDAO.FindAll();
             return View(list);
         }
-
+        #endregion
+        #region Create
         public async Task<IActionResult> Create()
         {
             //Manda uma viewbag de categoria para view
@@ -61,6 +68,46 @@ namespace EcommerceASP.NET.Controllers
 
             }
             return View();
+        }
+        #endregion
+        #region Delete
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction(nameof(Error), new { message = "Id não fornecido" });
+            }
+
+            //Por id ser opcional deve incluir o value junto
+            var obj = await _produtoDAO.FindByIdAsync(id.Value);
+
+            if (obj == null)
+            {
+                return RedirectToAction(nameof(Error), new { message = "Id não encontrado" });
+            }
+            return View(obj);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _produtoDAO.RemoveAsync(id);
+            return RedirectToAction(nameof(Index));
+        }
+        #endregion
+
+        /*
+         * INSTANCIA UMA PÁGIA DO ErrorViewModel PASSA MENSAGEM DO PARAMETRO
+         * DA CHAMADA E RETORNA A VIEW DE ERRO COM MSG
+        */
+        public IActionResult Error(string message)
+        {
+            var viewModel = new ErrorViewModel
+            {
+                Message = message,
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            };
+            return View(viewModel);
         }
     }
 }

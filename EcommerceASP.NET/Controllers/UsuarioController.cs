@@ -5,12 +5,12 @@ using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Repository.DAL;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authorization;
 
 namespace EcommerceASP.NET.Controllers
 {
     public class UsuarioController : Controller
     {
+        #region Construtor
         private readonly UsuarioDAO _usuarioDAO;
         private readonly UserManager<UsuarioLogado> _userManager;
         private readonly SignInManager<UsuarioLogado> _signInManager;
@@ -20,14 +20,15 @@ namespace EcommerceASP.NET.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-
-
+        #endregion
+        #region Index
         public async Task<IActionResult> Index()
         {
             var list = await _usuarioDAO.FindAllAsync();
             return View(list);
         }
-
+        #endregion
+        #region Create
         /*TRANSFORMAR E ASINCRONO*/
         public IActionResult Create()
         {
@@ -69,7 +70,8 @@ namespace EcommerceASP.NET.Controllers
             }            
             return View(usuario);
         }
-
+        #endregion
+        #region Buscar Cep
         /*TRANSFORMAR E ASINCRONO*/
         public IActionResult BuscarCep(Usuario usuario)
         {
@@ -79,7 +81,8 @@ namespace EcommerceASP.NET.Controllers
 
             return RedirectToAction(nameof(Create));
         }
-
+        #endregion
+        #region Login e Logout
         public IActionResult Login()
         {
             return View();
@@ -92,15 +95,16 @@ namespace EcommerceASP.NET.Controllers
             if (result.Succeeded)
             {
                 //Mudar o redirecionamento para return RedirectToAction("Index" , "Produtos")
-                return RedirectToAction("Index");
+                return RedirectToAction("Index" , "Produto");
             }
             return View();
         }
-
+        
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
+        #endregion
     }
 }

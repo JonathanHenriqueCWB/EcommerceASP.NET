@@ -38,5 +38,17 @@ namespace Repository.DAL
         {
             return await _context.Produtos.FirstOrDefaultAsync(x => x.Nome.Equals(p.Nome));
         }
+
+        public async Task<Produto> FindByIdAsync(int id)
+        {
+            return await _context.Produtos.FindAsync(id);
+        }
+
+        public async Task RemoveAsync(int id)
+        {
+            var obj = await _context.Produtos.FindAsync(id);
+            _context.Produtos.Remove(obj);
+            await _context.SaveChangesAsync();
+        }
     }
 }

@@ -5,10 +5,9 @@
 }
 
 <h2>Gerenciamento de Produtos</h2>
-<a asp-action="Create">Cadastrar Produto</a>
+<a class="btn btn-default" asp-action="Create">Cadastrar Produto</a>
 
-<table style="margin-bottom:15px;margin-top:15px"
-       class="table table-hover table-striped">
+<table style="margin-bottom:15px;margin-top:15px" class="table table-hover table-striped">
     <thead>
         <tr class="table-active">
             <th>Nome</th>
@@ -29,8 +28,10 @@
                 <td>@item.Quantidade</td>
                 <td><img src="~/images/@item.Imagem" style="width:150px;height:120px" /></td>
                 <td>@item.CriadoEm</td>
-                <td><a class="btn btn-primary" asp-action="Remover" asp-route-id="@item.ProdutoId">Remover</a></td>
-                <td><a class="btn btn-danger" asp-action="Alterar" asp-route-id="@item.ProdutoId">Alterar</a></td>
+                <td class="text-right">
+                    <a class="btn btn-warning" asp-action="Change" asp-route-id="@item.ProdutoId">Alterar</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ProdutoId">Remover</a>
+                </td>
             </tr>
         }
     </tbody>
