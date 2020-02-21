@@ -1,0 +1,60 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="row">
+    <form method="post">        
+        <div class="col-sm-12 col-md-6">
+            <fieldset>
+                <legend>Endereço</legend>
+                <div asp-validation-summary="ModelOnly" class="text-primary"></div>
+                
+                <div class="form-group" id="Cep">
+                    <label asp-for="Endereco.Cep"></label>
+                    <input type="text" asp-for="Endereco.Cep" class="form-control" />
+                </div>
+                <input type="submit" class="btn btn-info" value="Buscar" asp-action="BuscarCep" asp-controller="Usuario" />
+
+                <div class="form-group" id="Logradouro">
+                    <label asp-for="Endereco.Logradouro"></label>
+                    <input type="text" asp-for="Endereco.Logradouro" class="form-control" readonly="" />
+                </div>
+                <div class="form-group" id="Bairro">
+                    <label asp-for="Endereco.Bairro"></label>
+                    <input type="text" asp-for="Endereco.Bairro" class="form-control" readonly="" />
+                </div>
+                <div class="form-group" id="Cidade">
+                    <label asp-for="Endereco.Localidade"></label>
+                    <input type="text" asp-for="Endereco.Localidade" class="form-control" readonly="" />
+                </div>
+                <div class="form-group" id="Uf">
+                    <label asp-for="Endereco.Uf"></label>
+                    <input type="text" asp-for="Endereco.Uf"  class="form-control" readonly="" />
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="form-group" id="Email">
+                    <label asp-for="Email"></label>
+                    <input type="text" asp-for="Email" class="form-control" />
+                </div>
+                <div class="form-group" id="Senha">
+                    <label asp-for="Senha"></label>
+                    <input type="text" asp-for="Senha" class="form-control" />
+                </div>
+                <div class="form-group" id="ConfirmacaoSenha">
+                    <label asp-for="ConfirmaSenha"></label>
+                    <input type="text" asp-for="ConfirmaSenha" class="form-control" />
+                </div>
+                <input type="submit" class="btn btn-success" value="Cadastrar" asp-action="Create" asp-controller="Usuario" />
+            </fieldset>
+        </div>
+    </form>
+</div>
+
