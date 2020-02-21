@@ -1,8 +1,0 @@
-C:\Users\Jony\Desktop\EcommerceASP.NET\Repositor\obj\Debug\netcoreapp2.1\Repositor.csprojAssemblyReference.cache
-C:\Users\Jony\Desktop\EcommerceASP.NET\Repositor\obj\Debug\netcoreapp2.1\Repositor.AssemblyInfoInputs.cache
-C:\Users\Jony\Desktop\EcommerceASP.NET\Repositor\obj\Debug\netcoreapp2.1\Repositor.AssemblyInfo.cs
-C:\Users\Jony\Desktop\EcommerceASP.NET\Repositor\bin\Debug\netcoreapp2.1\Repository.deps.json
-C:\Users\Jony\Desktop\EcommerceASP.NET\Repositor\bin\Debug\netcoreapp2.1\Repository.dll
-C:\Users\Jony\Desktop\EcommerceASP.NET\Repositor\bin\Debug\netcoreapp2.1\Repository.pdb
-C:\Users\Jony\Desktop\EcommerceASP.NET\Repositor\obj\Debug\netcoreapp2.1\Repository.dll
-C:\Users\Jony\Desktop\EcommerceASP.NET\Repositor\obj\Debug\netcoreapp2.1\Repository.pdb
