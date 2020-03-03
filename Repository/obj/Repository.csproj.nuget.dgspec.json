@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\Repository.csproj": {}
+    "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\Domain.csproj": {
+    "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Jony\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Jony\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -63,18 +67,22 @@
         }
       }
     },
-    "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\Repository.csproj": {
+    "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\Jony\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Jony\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -86,8 +94,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\Domain.csproj"
+              "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj"
               }
             }
           }
