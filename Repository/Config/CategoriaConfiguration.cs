@@ -9,7 +9,10 @@ namespace Repository.Config
     {
         public void Configure(EntityTypeBuilder<Categoria> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(c => c.CategoriaId);
+
+            builder.Property(c => c.CategoriaId).IsRequired();
+            builder.Property(c => c.Nome).IsRequired().HasMaxLength(100);
         }
     }
 }

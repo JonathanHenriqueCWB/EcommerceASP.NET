@@ -111,7 +111,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[2.1.14, )"
+              "version": "[2.1.11, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",

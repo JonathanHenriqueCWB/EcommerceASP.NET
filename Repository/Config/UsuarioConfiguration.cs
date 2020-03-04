@@ -1,17 +1,19 @@
 ﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Repository.Config
 {
     class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(u => u.UsuarioId);
+
+            builder.Property(u => u.UsuarioId).IsRequired();
+            builder.Property(u => u.CriadoEm).IsRequired();
+            builder.Property(u => u.Email).IsRequired();
+            builder.Property(u => u.Endereco).IsRequired();
+            builder.Property(u => u.Senha).IsRequired();
         }
     }
 }

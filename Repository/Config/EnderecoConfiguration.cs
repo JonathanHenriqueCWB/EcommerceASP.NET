@@ -1,9 +1,6 @@
 ﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Repository.Config
 {
@@ -11,7 +8,14 @@ namespace Repository.Config
     {
         public void Configure(EntityTypeBuilder<Endereco> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(e => e.EnderecoId);
+
+            builder.Property(e => e.EnderecoId).IsRequired();
+            builder.Property(e => e.Bairro).IsRequired();
+            builder.Property(e => e.Cep).IsRequired();
+            builder.Property(e => e.Localidade).IsRequired();
+            builder.Property(e => e.Logradouro).IsRequired();
+            builder.Property(e => e.Uf).IsRequired();
         }
     }
 }

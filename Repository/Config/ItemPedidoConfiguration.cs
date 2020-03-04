@@ -1,9 +1,6 @@
 ﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Repository.Config
 {
@@ -11,7 +8,13 @@ namespace Repository.Config
     {
         public void Configure(EntityTypeBuilder<ItemPedido> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(ip => ip.ItemPedidoId);
+
+            builder.Property(ip => ip.ItemPedidoId).IsRequired();
+            builder.Property(ip => ip.Produto).IsRequired();
+            builder.Property(ip => ip.Quantidade).IsRequired();
+            builder.Property(ip => ip.Valor).IsRequired();
+
         }
     }
 }
