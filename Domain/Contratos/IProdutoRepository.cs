@@ -2,7 +2,7 @@
 
 namespace Domain.Contratos
 {
-    interface IProdutoRepository : IBaseRepository<Produto>
+    public interface IProdutoRepository : IBaseRepository<Produto>
     {
     }
 }

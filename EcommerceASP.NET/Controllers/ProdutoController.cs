@@ -28,9 +28,9 @@ namespace EcommerceASP.NET.Controllers
         }
         #endregion
         #region Index
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var list = await _produtoDAO.FindAll();
+            var list = _produtoDAO.FindAll();
             return View(list);
         }
         #endregion
@@ -43,7 +43,7 @@ namespace EcommerceASP.NET.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Produto produto, int drpCategorias, IFormFile fupImagem)
+        public IActionResult Create(Produto produto, int drpCategorias, IFormFile fupImagem)
         {
             if (ModelState.IsValid)
             {
@@ -61,7 +61,7 @@ namespace EcommerceASP.NET.Controllers
                 }
 
                 produto.Categoria = _categoriaDAO.FindById(drpCategorias);
-                Produto p = await _produtoDAO.InsertAsync(produto);
+                _produtoDAO.Insert(produto);
                 //Tratar erro de retorno
 
             }
@@ -69,7 +69,7 @@ namespace EcommerceASP.NET.Controllers
         }
         #endregion
         #region Delete
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -77,7 +77,7 @@ namespace EcommerceASP.NET.Controllers
             }
 
             //Por id ser opcional deve incluir o value junto
-            var obj = await _produtoDAO.FindByIdAsync(id.Value);
+            var obj = _produtoDAO.FindById(id.Value);
 
             if (obj == null)
             {
@@ -87,9 +87,9 @@ namespace EcommerceASP.NET.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(int id)
         {
-            await _produtoDAO.RemoveAsync(id);
+            _produtoDAO.Remove(id);
             return RedirectToAction(nameof(Index));
         }
         #endregion

@@ -29,8 +29,9 @@ namespace Repository.DAL
             Context.SaveChanges();
         }
 
-        public void Remove(Objeto objeto)
+        public void Remove(int id)
         {
+            var objeto = FindById(id);
             Context.Set<Objeto>().Remove(objeto);
             Context.SaveChanges();
         }
