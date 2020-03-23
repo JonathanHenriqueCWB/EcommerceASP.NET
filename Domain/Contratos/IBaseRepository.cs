@@ -10,7 +10,5 @@ namespace Domain.Contratos
         void Remove(Obj objeto);
         IEnumerable<Obj> FindAll();
         Obj FindById(int id);
-        Obj FindByEmail(Obj objeto);
-
     }
 }

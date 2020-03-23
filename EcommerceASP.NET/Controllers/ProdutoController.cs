@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using Domain.Models;
 using EcommerceASP.NET.Models;
@@ -37,10 +35,10 @@ namespace EcommerceASP.NET.Controllers
         }
         #endregion
         #region Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             //Manda uma viewbag de categoria para view
-            ViewBag.Categorias = new SelectList(await _categoriaDAO.FindAllAsync(), "CategoriaId", "Nome");
+            ViewBag.Categorias = new SelectList(_categoriaDAO.FindAll(), "CategoriaId", "Nome");
             return View();
         }
 
@@ -62,7 +60,7 @@ namespace EcommerceASP.NET.Controllers
                     produto.Imagem = "semimagem.jpg";
                 }
 
-                produto.Categoria = await _categoriaDAO.FindById(drpCategorias);
+                produto.Categoria = _categoriaDAO.FindById(drpCategorias);
                 Produto p = await _produtoDAO.InsertAsync(produto);
                 //Tratar erro de retorno
 

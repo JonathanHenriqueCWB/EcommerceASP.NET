@@ -20,9 +20,9 @@ namespace EcommerceASP.NET.Controllers
         }
         #endregion
         #region Index
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var list = await _categoriaDAO.FindAllAsync();
+            var list =  _categoriaDAO.FindAll();
             return View(list);
         }
         #endregion
@@ -33,11 +33,11 @@ namespace EcommerceASP.NET.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Categoria categoria)
+        public IActionResult Create(Categoria categoria)
         {
             if (ModelState.IsValid)
             {
-                await _categoriaDAO.InsertAsync(categoria);
+                _categoriaDAO.Insert(categoria);
                 return RedirectToAction(nameof(Index));
             }
             return View();
