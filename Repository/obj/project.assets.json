@@ -4413,25 +4413,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Jony\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Repository\\Repository.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Repository\\obj\\",
+      "projectPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\Repository.csproj",
+      "packagesPath": "C:\\Users\\Jony\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Jony\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -4443,8 +4442,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Aluno\\Desktop\\EcommerceASP.NET\\Domain\\Domain.csproj"
+            "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Jony\\source\\repos\\EcommerceASP.NET\\Domain\\Domain.csproj"
             }
           }
         }

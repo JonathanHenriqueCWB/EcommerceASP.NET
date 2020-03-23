@@ -13,8 +13,7 @@ namespace Repository.Config
             builder.Property(p => p.PedidoId).IsRequired();
             builder.Property(p => p.ItemPedidos).IsRequired();
             builder.Property(p => p.DataPedido).IsRequired();
-            builder.Property(p => p.DataPrevisaoEntrega).IsRequired();            
-            builder.Property(p => p.Usuario).IsRequired();            
+            builder.Property(p => p.DataPrevisaoEntrega).IsRequired();
         }
     }
 }
