@@ -13,8 +13,6 @@ namespace Repository.Config
             builder.Property(u => u.CriadoEm).IsRequired();
             builder.Property(u => u.Email).IsRequired();
             builder.Property(u => u.Senha).IsRequired();
-
-            builder.HasOne(u => u.Endereco);
         }
     }
 }

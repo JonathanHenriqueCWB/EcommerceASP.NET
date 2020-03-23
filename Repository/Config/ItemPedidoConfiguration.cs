@@ -13,9 +13,6 @@ namespace Repository.Config
             builder.Property(ip => ip.ItemPedidoId).IsRequired();
             builder.Property(ip => ip.Quantidade).IsRequired();
             builder.Property(ip => ip.Valor).IsRequired();
-
-            builder.HasOne(ip => ip.Produto);
-
         }
     }
 }

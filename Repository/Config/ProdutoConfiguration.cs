@@ -17,8 +17,6 @@ namespace Repository.Config
             builder.Property(p => p.Nome).IsRequired();
             builder.Property(p => p.Preco).IsRequired();
             builder.Property(p => p.Quantidade).IsRequired();
-
-            builder.HasOne(p => p.Categoria);
         }
     }
 }

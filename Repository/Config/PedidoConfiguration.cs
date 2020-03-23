@@ -11,7 +11,6 @@ namespace Repository.Config
             builder.HasKey(p => p.PedidoId);
 
             builder.Property(p => p.PedidoId).IsRequired();
-            builder.Property(p => p.ItemPedidos).IsRequired();
             builder.Property(p => p.DataPedido).IsRequired();
             builder.Property(p => p.DataPrevisaoEntrega).IsRequired();
         }
